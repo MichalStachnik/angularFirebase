@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;   
+}
+body{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.container{
+    width: 100%;
+    padding: 15px;
+    text-align:center;
+    box-sizing:border-box;
+}
+.container div{
+    display:inline-block;  
+    margin-top: 5px;
+}
+input{
+    padding: 9px;
+}
+.container select{
+    width: 100%;
+    height: 35px;
+    border: none;
+}
+#title, #dueDate{
+    width:85%;
+    border:none;
+    border-radius: 7px;
+    height: 20px;
+}
+#tableWrapper{
+    width:90%;
+    margin:0 auto;
+    padding:10px;
+    padding-top:0;
+}
+table{
+    margin: 0 auto;
+    width: 90%;
+    border-collapse: collapse;
+}
+table tr{
+    border-radius:3px;
+}
+table td{
+    text-align: center;
+    padding: 10px;
+    width: 16.6667%;
+    height: 25px;
+}
+#edit{
+    /*background-color: #0C92E8;*/
+}
+#delete{
+    /*background-color: #EA2E49;*/
+}
+#edit, #delete{
+    border-radius: 7px;
+    color:aliceblue;
+    cursor: pointer;
+}
+#edit:hover, #delete:hover{
+    box-shadow: inset 0px 0px 5px 5px rgba(100,0,0,0.15);
+}
+table input{
+    padding:5px;
+    width:100px
+}
+input[type="button"] {
+    color:aliceblue;
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    width:80px;
+    cursor: pointer;
+}
+input[type="submit"]{
+    color: aliceblue;
+    background-color: #2980B9;
+    border:none;
+    border-radius: 7px;
+    height: 40px;
+    cursor: pointer;
+}
+button{
+    color:aliceblue;
+    /*background-color:#79BD8F;*/
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    cursor: pointer;
+    padding: 4px;
+    width: 50%;
+}
+button:focus{outline:0;}
+input:focus{
+    outline:none;
+}
+select:focus{
+    outline:none;   
+}
+
+div.priorityDiv, #priority{
+    height:38px;
+}
+.controls{
+    margin-bottom: 10px;
+}
+
+#todoList{
+    position:relative;
+    z-index: 1;
+    transition:padding-right 1s;
+    background-clip:content-box;
+    min-height:1000px;
+    background-image:url('grey.png');
+    height:100%;
+}
+#weatherApp{
+    position:fixed;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    z-index:0;
+    width:120px;
+    padding:30px;
+}
+
+#weatherApp label, button{
+    font-family: "Ubuntu", sans-serif;
+    font-size:16px;
+    margin-bottom:16px;
+    color: rgba(255,255,255,0.8);
+}
+#weatherApp label:hover{
+    color: rgba(255,255,255,1);
+}
+#weatherApp input{
+    width:80%;
+}
+.toggle{
+    position:fixed;
+    top: 20px;
+    z-index:2;
+    right:16.5%;
+    text-decoration: none;
+    font-size:30px;
+    color:black;
+    transition: padding-right 1s;
+}
+#weatherToggle{
+    display:none;
+}
+
+#weatherToggle:checked + #pageWrap #todoList{
+    padding-right: 180px;
+    transition: padding-right 1s;
+}
+#weatherToggle:checked + #pageWrap .toggle{
+    padding-right:100px;
+    transition: padding-right 1s;
+    cursor: pointer;
+}
+#searchWeatherButton{
+    width:100%;
+    margin-top:10px;
+    font-size:15px;
+    height:60px;
+}
+#pageWrap{
+    min-height:1000px;
+    background: #1f1f1f;
+}
+#tableHead{
+    height:50px;
+}
+#weather{
+    padding: 5px;
+    border-radius:5px;
+}
+footer{
+    text-align: center;
+}
+  
+
+
+@media only screen and (max-width: 900px){
+    .container div{
+        display:block;
+    }
+    #priority{
+        margin: 0 auto;
+        width:87%;
+    }
+    .container input[type="button"]{
+        margin-top:5px;
+    }
+    .toggle{
+        right:20px;
+        top: 145px;
+    }
+
+}
